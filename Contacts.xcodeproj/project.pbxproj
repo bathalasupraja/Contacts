@@ -16,6 +16,7 @@
 		36725B122C00DC4600806D71 /* ContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36725B112C00DC4600806D71 /* ContactsTests.swift */; };
 		36725B1C2C00DC4600806D71 /* ContactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36725B1B2C00DC4600806D71 /* ContactsUITests.swift */; };
 		36725B1E2C00DC4600806D71 /* ContactsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36725B1D2C00DC4600806D71 /* ContactsUITestsLaunchTests.swift */; };
+		36725B2B2C00DDA400806D71 /* ContactsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36725B2A2C00DDA400806D71 /* ContactsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		36725B172C00DC4600806D71 /* ContactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36725B1B2C00DC4600806D71 /* ContactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsUITests.swift; sourceTree = "<group>"; };
 		36725B1D2C00DC4600806D71 /* ContactsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		36725B2A2C00DDA400806D71 /* ContactsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				36725AFC2C00DC4400806D71 /* SceneDelegate.swift */,
 				36725AFE2C00DC4400806D71 /* ViewController.swift */,
 				36725B002C00DC4400806D71 /* Main.storyboard */,
+				36725B2A2C00DDA400806D71 /* ContactsCollectionViewCell.swift */,
 				36725B032C00DC4600806D71 /* Assets.xcassets */,
 				36725B052C00DC4600806D71 /* LaunchScreen.storyboard */,
 				36725B082C00DC4600806D71 /* Info.plist */,
@@ -260,6 +263,7 @@
 			files = (
 				36725AFF2C00DC4400806D71 /* ViewController.swift in Sources */,
 				36725AFB2C00DC4400806D71 /* AppDelegate.swift in Sources */,
+				36725B2B2C00DDA400806D71 /* ContactsCollectionViewCell.swift in Sources */,
 				36725AFD2C00DC4400806D71 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
