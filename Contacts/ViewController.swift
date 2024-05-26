@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createContacts()
-        contactsCollectionView.layer.backgroundColor = CGColor(red: 199/255, green: 140/255, blue: 230/255, alpha: 0.969)
+        contactsCollectionView.backgroundColor = .white//CGColor(red: 199/255, green: 140/255, blue: 230/255, alpha: 0.969)
         contactsCollectionView.dataSource = self
         contactsCollectionView.delegate = self
     }
@@ -37,6 +37,17 @@ class ViewController: UIViewController {
         contacts.append(ContactsModel(image: "Image7", name: "Dhanush", number: 8876442134))
         contacts.append(ContactsModel(image: "Image8", name: "Ranbir kapoor", number: 2341274398))
         contacts.append(ContactsModel(image: "Image9", name: "Ntr", number: 5738766539))
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate { _ in
+            print("rotating in progress.")
+        } completion: { _ in
+            print("rotation completed.")
+            //self.contactsCollectionView.reloadData()
+            self.contactsCollectionView.collectionViewLayout.invalidateLayout()
+        }
     }
 }
 
@@ -66,11 +77,15 @@ extension ViewController:  UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         0
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        0
+    }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let collectionViewSize = collectionView.bounds.size
-        return CGSize(width: 90, height: 190)
-        
+        let collectionViewWidth = collectionView.bounds.size.width
+        /// each cell should occupie 1/3rd of the collection view width.
+        return CGSize(width: collectionViewWidth/3, height: collectionViewWidth/3)
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
